@@ -1,0 +1,12 @@
+Name_List={'Luke':0,'Darth':0,'Lea':0}
+
+if __name__ == "__main__":
+    with open('nameslist.txt','r') as open_file:
+        line = open_file.readline()
+        while line:
+            line = line.strip()
+            if line in Name_List:
+                Name_List[line]+=1
+                line = open_file.readline()
+    
+    print(Name_List)
